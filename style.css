@@ -1,0 +1,458 @@
+:root {
+  color-scheme: light;
+  color: #1f2937;
+  background: #eef2f7;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #eef2f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.app-shell {
+  width: min(380px, 100%);
+}
+
+.frame.inicio-iphone-17 {
+  background: white;
+  border-radius: 36px;
+  box-shadow: 0 24px 70px rgba(31, 41, 55, 0.12);
+  overflow: hidden;
+}
+
+.frame.main-iphone-17-iphone-17 {
+  padding: 22px 20px 12px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 18px;
+}
+
+.icon-btn.back {
+  width: 36px;
+  height: 36px;
+  border-radius: 14px;
+  background: #f3f5f9;
+  position: relative;
+}
+
+.icon-btn.back::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #1f2937;
+  border-bottom: 2px solid #1f2937;
+  transform: translateX(2px) rotate(45deg);
+}
+
+.page-title {
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #152e4d;
+  flex: 1;
+  text-align: center;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffb359 0%, #e67a2c 100%);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid #d6dce8;
+  background: #ffffff;
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #9ca3af;
+  border-radius: 50%;
+  position: relative;
+}
+
+.search-icon::after {
+  content: "";
+  position: absolute;
+  inset: auto auto 0 11px;
+  width: 8px;
+  height: 2px;
+  background: #9ca3af;
+  transform: rotate(45deg);
+}
+
+.search-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #152e4d;
+}
+
+.section-subtitle {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bento-grid-for-inscriptions {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.status-card {
+  background: #ffffff;
+  border: 1px solid #e4e8f0;
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  background: #f1f5f9;
+  display: grid;
+  place-items: center;
+}
+
+.card-icon::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: center/contain no-repeat;
+}
+
+.card-icon.clipboard::before {
+  background-image: radial-gradient(circle at 40% 30%, #3b82f6 0%, transparent 45%), linear-gradient(#3b82f6 0 0) 50% 28% / 12px 12px no-repeat;
+}
+
+.card-icon.graduation::before {
+  background-image: linear-gradient(#0f172a 0 0), radial-gradient(circle at 50% 50%, #2563eb 28%, transparent 29%);
+  background-size: 16px 10px, 24px 18px;
+  background-position: center top, center bottom;
+}
+
+.card-icon.shield::before {
+  background-image: polygon(50% 0%, 90% 24%, 80% 78%, 50% 100%, 20% 78%, 10% 24%);
+}
+
+.card-icon.calendar::before {
+  background-image: radial-gradient(circle at 50% 52%, #0f172a 16%, transparent 17%), linear-gradient(#0f172a 0 0) 50% 30% / 12px 12px no-repeat;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pill-success {
+  color: #166534;
+  background: #d1fae5;
+}
+
+.pill-muted {
+  color: #475569;
+  background: #f1f5f9;
+}
+
+.pill-alert {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.card-meta {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.card-footer {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-next {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #94a3b8;
+  border-bottom: 2px solid #94a3b8;
+  transform: rotate(45deg);
+}
+
+.announcement-card {
+  margin-top: 16px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.announcement-media {
+  min-height: 172px;
+  background: linear-gradient(180deg, #a7c7ff 0%, #3b82f6 100%);
+  position: relative;
+}
+
+.announcement-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  padding: 6px 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.announcement-content {
+  padding: 22px 20px 22px;
+}
+
+.announcement-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.announcement-text {
+  margin: 14px 0 22px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.button-secondary {
+  width: 100%;
+  background: #f5b549;
+  color: #0f172a;
+}
+
+.tracking-card {
+  margin-top: 16px;
+  border-radius: 26px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+}
+
+.tracking-head {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.tracking-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #dcfce7;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.tracking-icon::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(180deg, transparent 0%, transparent 40%, #16a34a 40%, #16a34a 55%, transparent 55%), linear-gradient(90deg, transparent 0%, transparent 35%, #16a34a 35%, #16a34a 60%, transparent 60%), linear-gradient(#16a34a 0 0);
+  background-size: 100% 100%, 100% 100%, 2px 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tracking-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.tracking-text {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.button-primary {
+  width: 100%;
+  background: #e5b541;
+  color: #0f172a;
+  gap: 8px;
+}
+
+.tracking-action-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4));
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.08);
+}
+
+.bottom-navigation {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 8px 4px 18px;
+  background: #ffffff;
+  border-radius: 28px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0;
+  color: #64748b;
+  border-radius: 18px;
+  background: transparent;
+}
+
+.nav-item.active {
+  background: #d9f7ea;
+  color: #0e3f2d;
+}
+
+.nav-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  border-radius: 8px;
+  background: #cbd5e1;
+}
+
+.nav-icon.dashboard {
+  background: linear-gradient(180deg, #dbeafe 0%, #93c5fd 100%);
+}
+
+.nav-icon.inscriptions {
+  background: linear-gradient(180deg, #d9f7ea 0%, #6ee7b7 100%);
+}
+
+.nav-icon.inbox {
+  background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 100%);
+}
+
+.nav-icon.account {
+  background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 100%);
+}
+
+.nav-label {
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+@media (max-width: 380px) {
+  .frame.main-iphone-17-iphone-17 {
+    padding: 18px 16px 12px;
+  }
+}
