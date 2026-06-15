@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalização - Portal de Candidaturas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="final-body">
+  <main class="app-shell">
+    <section class="frame final-frame">
+      <header class="revisao-top-bar">
+        <button class="icon-btn back" aria-label="Voltar" onclick="window.location.href='revisao.html'">
+          <i class="ph ph-arrow-left"></i>
+        </button>
+        <h1 class="page-title">Portal de Candidaturas</h1>
+        <div class="avatar-empty"></div>
+      </header>
+
+      <div class="final-content">
+        <!-- Minimal Stepper -->
+        <div class="mini-stepper">
+          <div class="step-circle mini completed"><i class="ph-bold ph-check"></i></div>
+          <div class="step-line mini completed"></div>
+          <div class="step-circle mini completed"><i class="ph-bold ph-check"></i></div>
+          <div class="step-line mini completed"></div>
+          <div class="step-circle mini active">3</div>
+        </div>
+
+        <!-- Success Card -->
+        <div class="success-card">
+          <div class="success-header">
+            <div class="success-icon-wrapper">
+              <i class="ph-fill ph-seal-check"></i>
+            </div>
+            <h2>Inscrição Realizada!</h2>
+          </div>
+          <p class="success-text">Sua solicitação de matricula para <strong>Engenharia de Software (2024.1)</strong> foi enviada com sucesso.</p>
+          
+          <div class="inscription-number-box">
+            <span>NÚMERO DA INSCRIÇÃO</span>
+            <h3>#2024-8842-XP</h3>
+            <div class="status-pill waiting">
+              <div class="dot"></div>
+              Aguardando Pagamento
+            </div>
+          </div>
+        </div>
+
+        <!-- Notifications Card -->
+        <div class="notifications-card">
+          <div class="notif-header">
+            <i class="ph ph-bell-ringing"></i>
+            <h3>Fique Atualizado</h3>
+          </div>
+          <p class="notif-text">Receba notificações em tempo real sobre o status da sua inscrição e os próximos passos do processo seletivo.</p>
+          
+          <div class="toggle-row">
+            <div class="toggle-info">
+              <div class="toggle-icon-wrapper whatsapp">
+                <i class="ph-fill ph-whatsapp-logo"></i>
+              </div>
+              <div class="toggle-texts">
+                <strong>WhatsApp</strong>
+                <span>(11) 9****-1234</span>
+              </div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <div class="toggle-row">
+            <div class="toggle-info">
+              <div class="toggle-icon-wrapper email">
+                <i class="ph-fill ph-envelope"></i>
+              </div>
+              <div class="toggle-texts">
+                <strong>E-mail</strong>
+                <span>e.silva@email.com</span>
+              </div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-section">
+          <h2 class="payment-title">Pagamento</h2>
+          <p class="payment-text">Selecione uma forma de pagamento para confirmar sua vaga.</p>
+
+          <div class="payment-value-card">
+            <span>Valor da Taxa de Inscrição</span>
+            <h2>R$ 150,00</h2>
+          </div>
+
+          <div class="pix-card">
+            <div class="pix-header">
+              <i class="ph-fill ph-money"></i>
+              <strong>Pagar com PIX (Rápido)</strong>
+            </div>
+            <div class="qr-code-placeholder">
+              <div class="qr-dashed-box">
+                <i class="ph ph-qr-code"></i>
+              </div>
+            </div>
+            <button class="button btn-pix" onclick="this.innerHTML='<i class=\'ph ph-check\'></i> PIX Gerado e Copiado!'; this.style.backgroundColor='#16a34a';">
+              <i class="ph ph-copy"></i>
+              Gerar PIX
+            </button>
+          </div>
+
+          <button class="btn-boleto">
+            <i class="ph ph-barcode"></i>
+            <span>Gerar Boleto Bancário</span>
+            <i class="ph ph-caret-right chevron"></i>
+          </button>
+
+          <div class="payment-info-text">
+            <i class="ph ph-info"></i>
+            <p>O pagamento via PIX é compensado instantaneamente. Boletos podem levar até 3 dias úteis para processamento.</p>
+          </div>
+        </div>
+      </div>
+
+      <nav class="frame bottom-navigation" aria-label="Navegação principal">
+        <button class="nav-item" onclick="window.location.href='portal.html'">
+          <i class="ph ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
+          <span class="nav-label">Dashboard</span>
+        </button>
+        <button class="nav-item active green">
+          <i class="ph-fill ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
+          <span class="nav-label">Inscrições</span>
+        </button>
+        <button class="nav-item">
+          <div class="inbox-icon-container">
+            <i class="ph ph-bell nav-icon inbox" aria-hidden="true"></i>
+            <div class="notification-dot"></div>
+          </div>
+          <span class="nav-label">Inbox</span>
+        </button>
+        <button class="nav-item">
+          <i class="ph ph-user nav-icon account" aria-hidden="true"></i>
+          <span class="nav-label">Conta</span>
+        </button>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

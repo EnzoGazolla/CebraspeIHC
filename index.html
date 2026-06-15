@@ -3,144 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal de Candidaturas</title>
+  <title>Cadastro</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body>
+<body class="auth-body">
   <main class="app-shell">
-    <section class="frame inicio-iphone-17">
-      <div class="frame main-iphone-17-iphone-17">
-        <header class="frame top-bar">
-          <button class="icon-btn back" aria-label="Voltar"></button>
-          <h1 class="page-title">Portal de Candidaturas</h1>
-          <div class="avatar" aria-hidden="true"></div>
-        </header>
+    <section class="frame auth-frame">
+      <header class="auth-header">
+        <h1 class="auth-page-title">Cadastro</h1>
+      </header>
 
-        <section class="frame search-section">
-          <label class="input search-input" for="search">
-            <span class="search-icon" aria-hidden="true"></span>
-            <input id="search" type="search" placeholder="Buscar inscrições..." />
-          </label>
-        </section>
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button class="tab active">Login</button>
+          <button class="tab">Registro</button>
+        </div>
 
-        <section class="frame main-content-area-status-grid">
-          <div class="frame header">
-            <div class="frame container header-copy">
-              <div class="frame heading-2">
-                <p class="text section-title">Inscrições</p>
-              </div>
-              <div class="frame container">
-                <p class="text section-subtitle">Gerencie o progresso das suas solicitações ativas.</p>
-              </div>
+        <div class="auth-welcome">
+          <h2>Bem-Vindo</h2>
+          <p>Acesse seu painel de inscrição</p>
+        </div>
+
+        <div class="social-login">
+          <button class="btn-social google">
+            <svg class="google-icon" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Continue with Google
+          </button>
+          <button class="btn-social linkedin" onclick="window.open('https://www.linkedin.com/feed/', '_blank')">
+            <i class="ph-fill ph-linkedin-logo"></i>
+            Continue with LinkedIn
+          </button>
+        </div>
+
+        <div class="auth-divider">
+          <span>OR</span>
+        </div>
+
+        <form class="auth-form">
+          <div class="form-group">
+            <label for="cpf">CPF</label>
+            <div class="input-with-icon">
+              <i class="ph ph-identification-card input-icon"></i>
+              <input type="text" id="cpf" placeholder="000.000.000-00">
             </div>
           </div>
 
-          <div class="frame bento-grid-for-inscriptions">
-            <article class="frame status-card">
-              <div class="frame container card-top">
-                <div class="card-icon clipboard" aria-hidden="true"></div>
-                <span class="pill pill-success">Iniciada</span>
-              </div>
-              <div class="frame card-body">
-                <h2 class="card-title">Engenharia de Software</h2>
-                <p class="card-meta">ID: #4492 - Faculdade de Tecnologia</p>
-                <div class="card-footer">
-                  <p class="card-next">Próximo: Documentação</p>
-                  <span class="chevron" aria-hidden="true"></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="frame status-card">
-              <div class="frame container card-top">
-                <div class="card-icon graduation" aria-hidden="true"></div>
-                <span class="pill pill-muted">Em Análise</span>
-              </div>
-              <div class="frame card-body">
-                <h2 class="card-title">Mestrado em Dados</h2>
-                <p class="card-meta">ID: #4501 - Instituto de Pesquisa</p>
-                <div class="card-footer">
-                  <p class="card-next">Próximo: Entrevista</p>
-                  <span class="chevron" aria-hidden="true"></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="frame status-card">
-              <div class="frame container card-top">
-                <div class="card-icon shield" aria-hidden="true"></div>
-                <span class="pill pill-success">Verificada</span>
-              </div>
-              <div class="frame card-body">
-                <h2 class="card-title">Direito Tributário</h2>
-                <p class="card-meta">ID: #4388 - Escola de Direito</p>
-                <div class="card-footer">
-                  <p class="card-next">Próximo: Matrícula</p>
-                  <span class="chevron" aria-hidden="true"></span>
-                </div>
-              </div>
-            </article>
-
-            <article class="frame status-card">
-              <div class="frame container card-top">
-                <div class="card-icon calendar" aria-hidden="true"></div>
-                <span class="pill pill-alert">Pendência</span>
-              </div>
-              <div class="frame card-body">
-                <h2 class="card-title">MBA Gestão Ágil</h2>
-                <p class="card-meta">ID: #4612 - Business School</p>
-                <div class="card-footer">
-                  <p class="card-next">Corrigir: Histórico</p>
-                  <span class="chevron" aria-hidden="true"></span>
-                </div>
-              </div>
-            </article>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="senha">Senha</label>
+              <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+            </div>
+            <div class="input-with-icon">
+              <i class="ph ph-lock-key input-icon"></i>
+              <input type="password" id="senha" placeholder="••••••••">
+            </div>
           </div>
 
-          <article class="frame announcement-card">
-            <div class="announcement-media">
-              <span class="announcement-label">Anúncio</span>
-            </div>
-            <div class="announcement-content">
-              <h2 class="announcement-title">Novos Cursos de IA</h2>
-              <p class="announcement-text">Inscreva-se agora para a próxima turma de Inteligência Artificial Generativa com 30% de desconto na primeira parcela.</p>
-              <button class="button button-secondary">Saiba Mais</button>
-            </div>
-          </article>
+          <div class="checkbox-group">
+            <input type="checkbox" id="keep-connected">
+            <label for="keep-connected">Mantenha-me conectado</label>
+          </div>
 
-          <article class="frame tracking-card">
-            <div class="tracking-head">
-              <div class="tracking-icon" aria-hidden="true"></div>
-              <div>
-                <h3 class="tracking-title">Acompanhamento em Tempo Real</h3>
-                <p class="tracking-text">Sua inscrição principal está 85% concluída.</p>
-              </div>
-            </div>
-            <button class="button button-primary">
-              Acompanhar Detalhes
-              <span class="tracking-action-icon" aria-hidden="true"></span>
-            </button>
-          </article>
-        </section>
+          <button type="button" class="button button-primary auth-submit" onclick="window.location.href='portal.html'">
+            Entrar
+            <i class="ph-bold ph-arrow-right"></i>
+          </button>
+        </form>
 
-        <nav class="frame bottom-navigation" aria-label="Navegação principal">
-          <button class="nav-item">
-            <span class="nav-icon dashboard" aria-hidden="true"></span>
-            <span class="nav-label">Dashboard</span>
-          </button>
-          <button class="nav-item active">
-            <span class="nav-icon inscriptions" aria-hidden="true"></span>
-            <span class="nav-label">Inscrições</span>
-          </button>
-          <button class="nav-item">
-            <span class="nav-icon inbox" aria-hidden="true"></span>
-            <span class="nav-label">Inbox</span>
-          </button>
-          <button class="nav-item">
-            <span class="nav-icon account" aria-hidden="true"></span>
-            <span class="nav-label">Conta</span>
-          </button>
-        </nav>
+        <p class="auth-terms">
+          Ao continuar, você concorda com os Termos de Serviço<br>
+          e a Política de Privacidade da ProLink.
+        </p>
       </div>
     </section>
   </main>

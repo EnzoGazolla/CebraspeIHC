@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentos - Portal de Candidaturas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="docs-body">
+  <main class="app-shell">
+    <section class="frame docs-frame">
+      <header class="docs-top-bar">
+        <button class="icon-btn back" aria-label="Voltar" onclick="window.location.href='matricula.html'">
+          <i class="ph ph-arrow-left"></i>
+        </button>
+        <h1 class="page-title">Portal de Candidaturas</h1>
+        <div class="avatar-icon">
+          <i class="ph ph-user"></i>
+        </div>
+      </header>
+
+      <div class="docs-content">
+        <div class="stepper docs-stepper">
+          <div class="step completed">
+            <div class="step-circle"><i class="ph-bold ph-check"></i></div>
+            <span class="step-label">Pessoal</span>
+          </div>
+          <div class="step-line completed"></div>
+          <div class="step completed">
+            <div class="step-circle"><i class="ph-bold ph-check"></i></div>
+            <span class="step-label">Academico</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step active">
+            <div class="step-circle">3</div>
+            <span class="step-label">Documentos</span>
+          </div>
+        </div>
+
+        <div class="docs-header">
+          <h2>Carregar documentos</h2>
+          <p>Forneça cópias legíveis dos seguintes documentos para concluir seu processo de inscrição. Formatos suportados: PDF, JPG, PNG (Máximo de 10 MB cada).</p>
+        </div>
+
+        <div class="upload-area">
+          <div class="upload-icon-wrapper">
+            <i class="ph ph-cloud-arrow-up"></i>
+          </div>
+          <h3>Anexe os arquivos aqui.</h3>
+          <span class="upload-or">ou</span>
+          <button class="button button-primary btn-upload" onclick="this.innerText='Anexado'; this.style.backgroundColor='#16a34a'; document.querySelectorAll('.item-status').forEach(el => { el.innerText='Anexado'; el.style.backgroundColor='#dcfce7'; el.style.color='#16a34a'; })">Selecione no dispositivo</button>
+        </div>
+
+        <div class="checklist-section">
+          <h4 class="checklist-title">REQUIRED CHECKLIST</h4>
+          
+          <div class="checklist-item">
+            <div class="item-icon-wrapper">
+              <i class="ph ph-identification-card"></i>
+            </div>
+            <div class="item-info">
+              <strong>ID/RG</strong>
+              <span>Copia da frente e do verso</span>
+            </div>
+            <div class="item-status">Pendente</div>
+            <i class="ph ph-info item-action"></i>
+          </div>
+
+          <div class="checklist-item">
+            <div class="item-icon-wrapper">
+              <i class="ph ph-map-pin"></i>
+            </div>
+            <div class="item-info">
+              <strong>Comprovante de Endereço</strong>
+              <span>Emitido nos últimos 3 meses</span>
+            </div>
+            <div class="item-status">Pendente</div>
+            <i class="ph ph-info item-action"></i>
+          </div>
+
+          <div class="checklist-item">
+            <div class="item-icon-wrapper">
+              <i class="ph ph-graduation-cap"></i>
+            </div>
+            <div class="item-info">
+              <strong>Historico Academico</strong>
+              <span>Copia Oficial Autenticada</span>
+            </div>
+            <div class="item-status">Pendente</div>
+            <i class="ph ph-info item-action"></i>
+          </div>
+        </div>
+
+        <div class="docs-action-buttons">
+          <button class="button btn-outline-rounded">Salvar para depois</button>
+          <button class="button button-primary btn-rounded" onclick="window.location.href='revisao.html'">Continue</button>
+        </div>
+      </div>
+
+      <nav class="frame bottom-navigation" aria-label="Navegação principal">
+        <button class="nav-item">
+          <i class="ph ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
+          <span class="nav-label">Dashboard</span>
+        </button>
+        <button class="nav-item active green">
+          <i class="ph-fill ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
+          <span class="nav-label">Inscrições</span>
+        </button>
+        <button class="nav-item">
+          <i class="ph ph-bell nav-icon inbox" aria-hidden="true"></i>
+          <span class="nav-label">Inbox</span>
+        </button>
+        <button class="nav-item">
+          <i class="ph ph-user nav-icon account" aria-hidden="true"></i>
+          <span class="nav-label">Conta</span>
+        </button>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informações Pessoais - Portal de Candidaturas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="matricula-body">
+  <main class="app-shell">
+    <section class="frame matricula-frame">
+      <header class="matricula-top-bar">
+        <button class="icon-btn back" aria-label="Voltar" onclick="window.location.href='matricula.html'">
+          <i class="ph ph-arrow-left"></i>
+        </button>
+        <h1 class="page-title">Portal de Candidaturas</h1>
+        <div class="avatar-text">AJ</div>
+      </header>
+
+      <div class="matricula-content">
+        <div class="step-header">
+          <span class="step-indicator">PASSO 2 DE 3</span>
+          <h2>Informações Pessoais</h2>
+          <p>Confirme e complete seus dados cadastrais para prosseguir com a inscrição.</p>
+          
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 66.66%;"></div>
+          </div>
+        </div>
+
+        <div class="stepper">
+          <div class="step completed">
+            <div class="step-circle" style="background: #047857; color: #ffffff; box-shadow: none; border: none;"><i class="ph-bold ph-check"></i></div>
+            <span class="step-label" style="color: #475569;">Curso</span>
+          </div>
+          <div class="step-line" style="background: #047857;"></div>
+          <div class="step active">
+            <div class="step-circle">2</div>
+            <span class="step-label">Pessoal</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step">
+            <div class="step-circle">3</div>
+            <span class="step-label">Documentos</span>
+          </div>
+        </div>
+
+        <div class="matricula-card">
+          <div class="form-group">
+            <label>Nome Completo</label>
+            <div class="input-with-icon">
+              <i class="ph ph-user input-icon"></i>
+              <input type="text" value="Alex Thompson Rivera" placeholder="Seu nome completo">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>CPF</label>
+            <div class="input-with-icon">
+              <i class="ph ph-identification-card input-icon"></i>
+              <input type="text" value="123.456.789-00" placeholder="000.000.000-00">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>E-mail</label>
+            <div class="input-with-icon">
+              <i class="ph ph-envelope input-icon"></i>
+              <input type="email" value="alex.rivera@example.com" placeholder="seu@email.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Celular</label>
+            <div class="input-with-icon">
+              <i class="ph ph-device-mobile input-icon"></i>
+              <input type="tel" placeholder="(00) 00000-0000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Data de Nascimento</label>
+            <div class="input-with-icon">
+              <i class="ph ph-calendar-blank input-icon"></i>
+              <input type="text" placeholder="DD/MM/AAAA">
+            </div>
+          </div>
+
+          <div class="action-buttons" style="margin-top: 32px;">
+            <button class="button button-primary" onclick="window.location.href='documentos.html'">
+              Continuar para Documentos
+              <i class="ph-bold ph-arrow-right"></i>
+            </button>
+            <button class="button button-outline">
+              Salvar para depois
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="frame bottom-navigation" aria-label="Navegação principal">
+        <button class="nav-item">
+          <i class="ph ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
+          <span class="nav-label">Dashboard</span>
+        </button>
+        <button class="nav-item active green">
+          <i class="ph-fill ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
+          <span class="nav-label">Inscrições</span>
+        </button>
+        <button class="nav-item">
+          <i class="ph ph-bell nav-icon inbox" aria-hidden="true"></i>
+          <span class="nav-label">Inbox</span>
+        </button>
+        <button class="nav-item">
+          <i class="ph ph-user nav-icon account" aria-hidden="true"></i>
+          <span class="nav-label">Conta</span>
+        </button>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

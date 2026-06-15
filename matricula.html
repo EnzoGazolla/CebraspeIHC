@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Matrícula - Portal de Candidaturas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="matricula-body">
+  <main class="app-shell">
+    <section class="frame matricula-frame">
+      <header class="matricula-top-bar">
+        <button class="icon-btn back" aria-label="Voltar" onclick="window.location.href='portal.html'">
+          <i class="ph ph-arrow-left"></i>
+        </button>
+        <h1 class="page-title">Portal de Candidaturas</h1>
+        <div class="avatar-text">AJ</div>
+      </header>
+
+      <div class="matricula-content">
+        <div class="step-header">
+          <span class="step-indicator">PASSO 1 DE 3</span>
+          <h2>Nova Matrícula</h2>
+          <p>Selecione o curso e o campus de sua preferência para iniciar sua inscrição.</p>
+          
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill"></div>
+          </div>
+        </div>
+
+        <div class="stepper">
+          <div class="step active">
+            <div class="step-circle">1</div>
+            <span class="step-label">Curso</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step">
+            <div class="step-circle">2</div>
+            <span class="step-label">Pessoal</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step">
+            <div class="step-circle">3</div>
+            <span class="step-label">Documentos</span>
+          </div>
+        </div>
+
+        <div class="matricula-card">
+          <div class="form-group">
+            <label>Curso Desejado</label>
+            <div class="select-box">
+              <i class="ph ph-graduation-cap select-icon"></i>
+              <span class="select-text">Selecione o programa</span>
+              <i class="ph ph-caret-down select-arrow"></i>
+            </div>
+            <span class="help-text">Disponível para o próximo ciclo acadêmico de 2026.</span>
+          </div>
+
+          <div class="form-group">
+            <label>Preferred Campus</label>
+            
+            <div class="campus-option selected">
+              <i class="ph ph-map-pin campus-icon"></i>
+              <div class="campus-info">
+                <strong>Campus</strong>
+                <span>Downtown Innovation District</span>
+              </div>
+              <div class="radio-circle selected"></div>
+            </div>
+
+            <div class="campus-option">
+              <i class="ph ph-buildings campus-icon"></i>
+              <div class="campus-info">
+                <strong>North Campus</strong>
+                <span>Lakeside Research Center</span>
+              </div>
+              <div class="radio-circle"></div>
+            </div>
+          </div>
+
+          <div class="info-alert">
+            <i class="ph-fill ph-info info-icon"></i>
+            <div class="info-content">
+              <strong>Nota Importante</strong>
+              <p>Você poderá alterar sua seleção de campus posteriormente durante a entrevista presencial de matrícula.</p>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="button button-primary" onclick="window.location.href='pessoal.html'">
+              Continuar Informações Pessoais
+              <i class="ph-bold ph-arrow-right"></i>
+            </button>
+            <button class="button button-outline">
+              Salvar para depois
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="frame bottom-navigation" aria-label="Navegação principal">
+        <button class="nav-item">
+          <i class="ph ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
+          <span class="nav-label">Dashboard</span>
+        </button>
+        <button class="nav-item active green">
+          <i class="ph-fill ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
+          <span class="nav-label">Inscrições</span>
+        </button>
+        <button class="nav-item">
+          <i class="ph ph-bell nav-icon inbox" aria-hidden="true"></i>
+          <span class="nav-label">Inbox</span>
+        </button>
+        <button class="nav-item">
+          <i class="ph ph-user nav-icon account" aria-hidden="true"></i>
+          <span class="nav-label">Conta</span>
+        </button>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

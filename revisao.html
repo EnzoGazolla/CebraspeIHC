@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revisão - Portal de Candidaturas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="revisao-body">
+  <main class="app-shell">
+    <section class="frame revisao-frame">
+      <header class="revisao-top-bar">
+        <button class="icon-btn back" aria-label="Voltar" onclick="window.location.href='documentos.html'">
+          <i class="ph ph-arrow-left"></i>
+        </button>
+        <h1 class="page-title">Portal de Candidaturas</h1>
+        <div class="avatar-empty"></div>
+      </header>
+
+      <div class="revisao-content">
+        <div class="revisao-stepper">
+          <div class="step completed">
+            <div class="step-circle"><i class="ph-bold ph-check"></i></div>
+            <span class="step-label">Pessoal</span>
+          </div>
+          <div class="step-line completed"></div>
+          <div class="step completed">
+            <div class="step-circle"><i class="ph-bold ph-check"></i></div>
+            <span class="step-label">Curso</span>
+          </div>
+          <div class="step-line completed"></div>
+          <div class="step active outline">
+            <div class="step-circle">3</div>
+            <span class="step-label">Resumo</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step inactive">
+            <div class="step-circle">4</div>
+            <span class="step-label">Pagamento</span>
+          </div>
+        </div>
+
+        <div class="revisao-header">
+          <h2>Revise sua Candidatura</h2>
+          <p>Por favor confirme que todas as informações abaixo são correto antes de proceder ao pagamento portal.</p>
+        </div>
+
+        <div class="review-cards">
+          <!-- Card 1: Dados Pessoais -->
+          <div class="review-card">
+            <div class="review-card-header">
+              <div class="review-card-title">
+                <i class="ph ph-user"></i>
+                <h3>Dados Pessoais</h3>
+              </div>
+              <button class="edit-btn">Edit</button>
+            </div>
+            
+            <div class="review-data-group">
+              <label>Nome Completo</label>
+              <span>Alex Thompson Rivera</span>
+            </div>
+            
+            <div class="review-data-group">
+              <label>CPF</label>
+              <span>123.456.789-00</span>
+            </div>
+            
+            <div class="review-data-group">
+              <label>Endereco de Email</label>
+              <span>alex.rivera@example.com</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Curso Selecionado -->
+          <div class="review-card">
+            <div class="review-card-subtitle">
+              <i class="ph ph-graduation-cap"></i>
+              <span>CURSO SELECIONADO</span>
+            </div>
+            
+            <h3 class="highlight-title">Engenharia de Software</h3>
+            
+            <div class="course-meta">
+              <span class="pill-verified">Verificado</span>
+              <span class="meta-text">Diploma de Bacharelado</span>
+            </div>
+            
+            <button class="link-action">Mudar de Curso</button>
+          </div>
+
+          <!-- Card 3: Campus -->
+          <div class="review-card">
+            <div class="review-card-subtitle">
+              <i class="ph ph-map-pin"></i>
+              <span>CAMPUS</span>
+            </div>
+            
+            <h3 class="normal-title">Campus</h3>
+            <p class="campus-address">Av. University Heights, 1200</p>
+            
+            <button class="link-action">Alterar localização</button>
+          </div>
+        </div>
+
+        <!-- Privacy Alert -->
+        <div class="privacy-alert">
+          <i class="ph ph-info"></i>
+          <p>Your data is encrypted and stored securely according to our <a href="#">Privacy Policy</a>. No payment information has been collected yet.</p>
+        </div>
+
+        <!-- Submit Section -->
+        <div class="submit-section">
+          <button class="button btn-submit-payment" onclick="window.location.href='finalizacao.html'">
+            Confirme e Prossiga<br>para o pagamento.
+            <i class="ph-bold ph-arrow-right"></i>
+          </button>
+          <p class="terms-text">Ao clicar em "Confirmar",<br>você concorda com nossos Termos de Inscrição.</p>
+        </div>
+      </div>
+
+      <nav class="frame bottom-navigation" aria-label="Navegação principal">
+        <button class="nav-item">
+          <i class="ph ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
+          <span class="nav-label">Dashboard</span>
+        </button>
+        <button class="nav-item active green">
+          <i class="ph-fill ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
+          <span class="nav-label">Inscrições</span>
+        </button>
+        <button class="nav-item">
+          <i class="ph ph-bell nav-icon inbox" aria-hidden="true"></i>
+          <span class="nav-label">Inbox</span>
+        </button>
+        <button class="nav-item">
+          <i class="ph ph-user nav-icon account" aria-hidden="true"></i>
+          <span class="nav-label">Conta</span>
+        </button>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>
