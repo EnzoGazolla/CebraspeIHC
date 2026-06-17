@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inbox - Portal de Candidaturas</title>
+  <link rel="stylesheet" href="style.css?v=1.1">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .inbox-body {
+      background-color: #f8fafc;
+      font-family: 'Inter', sans-serif;
+    }
+    .inbox-header-title {
+      padding: 24px 20px 16px;
+      background: white;
+    }
+    .inbox-header-title h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0;
+    }
+    .message-list {
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 80px;
+    }
+    .message-card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      gap: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      position: relative;
+    }
+    .message-card.unread {
+      border-left: 4px solid #16a34a;
+      background: #f0fdf4;
+    }
+    .message-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .message-card.unread .message-icon-wrap {
+      background: #dcfce7;
+      color: #16a34a;
+    }
+    .message-icon-wrap i {
+      font-size: 20px;
+      color: #64748b;
+    }
+    .message-card.unread .message-icon-wrap i {
+      color: #16a34a;
+    }
+    .message-content {
+      flex: 1;
+    }
+    .message-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .message-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0f172a;
+      margin: 0;
+    }
+    .message-time {
+      font-size: 12px;
+      color: #64748b;
+    }
+    .message-text {
+      font-size: 13px;
+      color: #475569;
+      margin: 0;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="inbox-body">
+  <main class="app-shell">
+    <section class="frame">
+      <header class="matricula-top-bar" style="background: white;">
+        <button class="icon-btn back" aria-label="Voltar" onclick="window.history.back()">
+          <i class="ph ph-arrow-left"></i>
+        </button>
+        <h1 class="page-title">Portal de Candidaturas</h1>
+        <div class="avatar" style="cursor: pointer;" onclick="window.location.href='conta.html'">
+          <i class="ph ph-user" style="font-size: 24px; color: #0f172a;"></i>
+        </div>
+      </header>
+
+      <div class="inbox-header-title">
+        <h2>Inbox</h2>
+      </div>
+
+      <div class="message-list">
+        <div class="message-card unread">
+          <div class="message-icon-wrap">
+            <i class="ph-fill ph-file-text"></i>
+          </div>
+          <div class="message-content">
+            <div class="message-top">
+              <h3 class="message-title">Documentos Pendentes</h3>
+              <span class="message-time">10:30 AM</span>
+            </div>
+            <p class="message-text">Sua inscrição para Engenharia de Software requer que você anexe o Histórico Escolar atualizado.</p>
+          </div>
+        </div>
+
+        <div class="message-card">
+          <div class="message-icon-wrap">
+            <i class="ph-fill ph-check-circle"></i>
+          </div>
+          <div class="message-content">
+            <div class="message-top">
+              <h3 class="message-title">Candidatura Recebida</h3>
+              <span class="message-time">Ontem</span>
+            </div>
+            <p class="message-text">Recebemos sua candidatura com sucesso. Fique de olho no inbox para os próximos passos.</p>
+          </div>
+        </div>
+
+        <div class="message-card">
+          <div class="message-icon-wrap">
+            <i class="ph-fill ph-megaphone"></i>
+          </div>
+          <div class="message-content">
+            <div class="message-top">
+              <h3 class="message-title">Novos Cursos de IA</h3>
+              <span class="message-time">12 Jun</span>
+            </div>
+            <p class="message-text">Inscreva-se agora para a próxima turma de Inteligência Artificial Generativa com 30% de desconto na primeira parcela.</p>
+          </div>
+        </div>
+      </div>
+
+      <nav class="frame bottom-navigation" aria-label="Navegação principal">
+        <button class="nav-item" onclick="window.location.href='portal.html'">
+          <i class="ph ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
+          <span class="nav-label">Dashboard</span>
+        </button>
+        <button class="nav-item" onclick="window.location.href='matricula.html'">
+          <i class="ph-fill ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
+          <span class="nav-label">Inscrições</span>
+        </button>
+        <button class="nav-item active green" onclick="window.location.href='inbox.html'">
+          <i class="ph-fill ph-bell nav-icon inbox" aria-hidden="true"></i>
+          <span class="nav-label">Inbox</span>
+        </button>
+        <button class="nav-item" onclick="window.location.href='conta.html'">
+          <i class="ph ph-user nav-icon account" aria-hidden="true"></i>
+          <span class="nav-label">Conta</span>
+        </button>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

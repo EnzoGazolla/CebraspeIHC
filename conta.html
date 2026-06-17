@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conta - Portal de Candidaturas</title>
+  <link rel="stylesheet" href="style.css?v=1.1">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .conta-body {
+      background-color: #f8fafc;
+      font-family: 'Inter', sans-serif;
+    }
+    .profile-header {
+      background: white;
+      padding: 32px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .profile-avatar-large {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .profile-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 4px 0;
+    }
+    .profile-email {
+      font-size: 14px;
+      color: #64748b;
+      margin: 0;
+    }
+    .settings-list {
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 80px;
+    }
+    .settings-group-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 8px 0 4px 8px;
+    }
+    .setting-item {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      cursor: pointer;
+    }
+    .setting-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #475569;
+    }
+    .setting-icon-wrap i {
+      font-size: 20px;
+    }
+    .setting-content {
+      flex: 1;
+    }
+    .setting-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #0f172a;
+      margin: 0;
+    }
+    .setting-desc {
+      font-size: 13px;
+      color: #64748b;
+      margin: 4px 0 0 0;
+    }
+    .setting-action {
+      color: #cbd5e1;
+      font-size: 20px;
+    }
+    .setting-item.danger .setting-icon-wrap {
+      background: #fef2f2;
+      color: #ef4444;
+    }
+    .setting-item.danger .setting-title {
+      color: #ef4444;
+    }
+  </style>
+</head>
+<body class="conta-body">
+  <main class="app-shell">
+    <section class="frame">
+      <header class="matricula-top-bar" style="background: white;">
+        <button class="icon-btn back" aria-label="Voltar" onclick="window.history.back()">
+          <i class="ph ph-arrow-left"></i>
+        </button>
+        <h1 class="page-title">Sua Conta</h1>
+        <div class="avatar" style="cursor: pointer;" onclick="window.location.href='conta.html'">
+          <i class="ph ph-user" style="font-size: 24px; color: #0f172a;"></i>
+        </div>
+      </header>
+
+      <div class="profile-header">
+        <div class="profile-avatar-large">AJ</div>
+        <h2 class="profile-name">Alex Thompson Rivera</h2>
+        <p class="profile-email">alex.rivera@example.com</p>
+      </div>
+
+      <div class="settings-list">
+        <div class="settings-group-title">Preferências</div>
+        
+        <div class="setting-item">
+          <div class="setting-icon-wrap">
+            <i class="ph ph-user"></i>
+          </div>
+          <div class="setting-content">
+            <h3 class="setting-title">Meus Dados</h3>
+            <p class="setting-desc">Informações pessoais e endereço</p>
+          </div>
+          <i class="ph ph-caret-right setting-action"></i>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-icon-wrap">
+            <i class="ph ph-bell-ringing"></i>
+          </div>
+          <div class="setting-content">
+            <h3 class="setting-title">Notificações</h3>
+            <p class="setting-desc">Controle de alertas e emails</p>
+          </div>
+          <i class="ph ph-caret-right setting-action"></i>
+        </div>
+
+        <div class="settings-group-title" style="margin-top: 16px;">Segurança</div>
+
+        <div class="setting-item">
+          <div class="setting-icon-wrap">
+            <i class="ph ph-lock-key"></i>
+          </div>
+          <div class="setting-content">
+            <h3 class="setting-title">Senha e Segurança</h3>
+            <p class="setting-desc">Altere sua senha de acesso</p>
+          </div>
+          <i class="ph ph-caret-right setting-action"></i>
+        </div>
+
+        <div class="setting-item danger" onclick="window.location.href='index.html'">
+          <div class="setting-icon-wrap">
+            <i class="ph ph-sign-out"></i>
+          </div>
+          <div class="setting-content">
+            <h3 class="setting-title">Sair da Conta</h3>
+          </div>
+        </div>
+      </div>
+
+      <nav class="frame bottom-navigation" aria-label="Navegação principal">
+        <button class="nav-item" onclick="window.location.href='portal.html'">
+          <i class="ph ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
+          <span class="nav-label">Dashboard</span>
+        </button>
+        <button class="nav-item" onclick="window.location.href='matricula.html'">
+          <i class="ph-fill ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
+          <span class="nav-label">Inscrições</span>
+        </button>
+        <button class="nav-item" onclick="window.location.href='inbox.html'">
+          <i class="ph ph-bell nav-icon inbox" aria-hidden="true"></i>
+          <span class="nav-label">Inbox</span>
+        </button>
+        <button class="nav-item active green" onclick="window.location.href='conta.html'">
+          <i class="ph-fill ph-user nav-icon account" aria-hidden="true"></i>
+          <span class="nav-label">Conta</span>
+        </button>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

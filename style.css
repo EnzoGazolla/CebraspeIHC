@@ -757,6 +757,7 @@ button {
 }
 
 .step {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -764,6 +765,7 @@ button {
 }
 
 .step-circle {
+  flex-shrink: 0;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -1294,10 +1296,11 @@ button {
 .step.inactive .step-circle {
   background: #e2e8f0;
   color: #475569;
+  flex-shrink: 0;
 }
 
 .revisao-header {
-  padding: 0 24px 16px;
+  padding: 24px 24px 16px;
 }
 
 .revisao-header h2 {
@@ -1615,6 +1618,13 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.inscription-number-box.processing {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
 }
 
 .inscription-number-box span {
@@ -1647,6 +1657,14 @@ button {
   height: 6px;
   background: #1e3a8a;
   border-radius: 50%;
+}
+
+.status-pill.processing {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.status-pill.processing .dot {
+  background: #16a34a;
 }
 
 .notifications-card {
@@ -1947,3 +1965,21 @@ input:checked + .slider:before {
   border: 2px solid #ffffff;
 }
 
+
+
+/* Mobile Responsiveness for Real Devices */
+@media (max-width: 480px) {
+  body {
+    padding: 0 !important;
+    background: #f8fafc !important;
+  }
+  .app-shell {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .frame, [class*="-frame"] {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    min-height: 100vh !important;
+  }
+}

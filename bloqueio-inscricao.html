@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviso de Inscrição - Portal de Candidaturas</title>
+  <link rel="stylesheet" href="style.css?v=1.1">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .bloqueio-body {
+      background-color: #f8fafc;
+      font-family: 'Inter', sans-serif;
+    }
+    .bloqueio-content {
+      padding: 32px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 80px;
+      min-height: calc(100vh - 160px);
+      justify-content: center;
+    }
+    .bloqueio-icon-wrap {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #fef2f2;
+      color: #ef4444;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      margin-bottom: 24px;
+    }
+    .bloqueio-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 16px 0;
+    }
+    .bloqueio-text {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.6;
+      margin: 0 0 32px 0;
+    }
+    .bloqueio-text strong {
+      color: #0f172a;
+    }
+    .bloqueio-actions {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn-continuar {
+      width: 100%;
+      padding: 16px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-voltar {
+      width: 100%;
+      padding: 16px;
+      background-color: transparent;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .btn-voltar:hover {
+      background-color: #f1f5f9;
+    }
+  </style>
+</head>
+<body class="bloqueio-body">
+  <main class="app-shell">
+    <section class="frame">
+      <header class="matricula-top-bar" style="background: white;">
+        <button class="icon-btn back" aria-label="Voltar" onclick="window.location.href='portal.html'">
+          <i class="ph ph-arrow-left"></i>
+        </button>
+        <h1 class="page-title">Aviso do Sistema</h1>
+        <div class="avatar" style="cursor: pointer;" onclick="window.location.href='conta.html'">
+          <i class="ph ph-user" style="font-size: 24px; color: #0f172a;"></i>
+        </div>
+      </header>
+
+      <div class="bloqueio-content">
+        <div class="bloqueio-icon-wrap">
+          <i class="ph-fill ph-warning-circle"></i>
+        </div>
+        
+        <h2 class="bloqueio-title">Inscrição em Andamento</h2>
+        
+        <p class="bloqueio-text">
+          Identificamos que você já possui uma inscrição iniciada para o curso de <strong>Engenharia de Software</strong>. Por favor, finalize sua inscrição atual antes de iniciar um novo processo seletivo para evitar duplicidade em nosso sistema.
+        </p>
+
+        <div class="bloqueio-actions">
+          <button class="btn-continuar" onclick="window.location.href='matricula.html'">
+            Continuar Inscrição Atual
+            <i class="ph-bold ph-arrow-right"></i>
+          </button>
+          <button class="btn-voltar" onclick="window.location.href='portal.html'">
+            Voltar ao Dashboard
+          </button>
+        </div>
+      </div>
+
+      <nav class="frame bottom-navigation" aria-label="Navegação principal">
+        <button class="nav-item active green" onclick="window.location.href='portal.html'">
+          <i class="ph-fill ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
+          <span class="nav-label">Dashboard</span>
+        </button>
+        <button class="nav-item" onclick="window.location.href='matricula.html'">
+          <i class="ph ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
+          <span class="nav-label">Inscrições</span>
+        </button>
+        <button class="nav-item" onclick="window.location.href='inbox.html'">
+          <i class="ph ph-bell nav-icon inbox" aria-hidden="true"></i>
+          <span class="nav-label">Inbox</span>
+        </button>
+        <button class="nav-item" onclick="window.location.href='conta.html'">
+          <i class="ph ph-user nav-icon account" aria-hidden="true"></i>
+          <span class="nav-label">Conta</span>
+        </button>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

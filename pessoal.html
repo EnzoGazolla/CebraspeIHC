@@ -15,26 +15,28 @@
           <i class="ph ph-arrow-left"></i>
         </button>
         <h1 class="page-title">Portal de Candidaturas</h1>
-        <div class="avatar-text">AJ</div>
+        <div class="avatar" style="cursor: pointer;" onclick="window.location.href='conta.html'">
+          <i class="ph ph-user" style="font-size: 24px; color: #0f172a;"></i>
+        </div>
       </header>
 
       <div class="matricula-content">
         <div class="step-header">
-          <span class="step-indicator">PASSO 2 DE 3</span>
+          <span class="step-indicator">PASSO 2 DE 4</span>
           <h2>Informações Pessoais</h2>
           <p>Confirme e complete seus dados cadastrais para prosseguir com a inscrição.</p>
           
           <div class="progress-bar-container">
-            <div class="progress-bar-fill" style="width: 66.66%;"></div>
+            <div class="progress-bar-fill" style="width: 50%;"></div>
           </div>
         </div>
 
         <div class="stepper">
           <div class="step completed">
-            <div class="step-circle" style="background: #047857; color: #ffffff; box-shadow: none; border: none;"><i class="ph-bold ph-check"></i></div>
-            <span class="step-label" style="color: #475569;">Curso</span>
+            <div class="step-circle"><i class="ph-bold ph-check"></i></div>
+            <span class="step-label">Curso</span>
           </div>
-          <div class="step-line" style="background: #047857;"></div>
+          <div class="step-line completed"></div>
           <div class="step active">
             <div class="step-circle">2</div>
             <span class="step-label">Pessoal</span>
@@ -43,6 +45,11 @@
           <div class="step">
             <div class="step-circle">3</div>
             <span class="step-label">Documentos</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step">
+            <div class="step-circle">4</div>
+            <span class="step-label">Revisão</span>
           </div>
         </div>
 
@@ -67,7 +74,7 @@
             <label>E-mail</label>
             <div class="input-with-icon">
               <i class="ph ph-envelope input-icon"></i>
-              <input type="email" value="alex.rivera@example.com" placeholder="seu@email.com">
+              <input type="email" value="alex.rivera@gmail.com" placeholder="seu@email.com">
             </div>
           </div>
 
@@ -75,7 +82,7 @@
             <label>Celular</label>
             <div class="input-with-icon">
               <i class="ph ph-device-mobile input-icon"></i>
-              <input type="tel" placeholder="(00) 00000-0000">
+              <input type="tel" value="(11) 98765-4321" placeholder="(00) 00000-0000" maxlength="15" oninput="this.value = this.value.replace(/\D/g, '').replace(/(\d{2})(\d)/, '($1) $2').replace(/(\d{5})(\d{4})\d+?$/, '$1-$2');">
             </div>
           </div>
 
@@ -83,16 +90,16 @@
             <label>Data de Nascimento</label>
             <div class="input-with-icon">
               <i class="ph ph-calendar-blank input-icon"></i>
-              <input type="text" placeholder="DD/MM/AAAA">
+              <input type="date" value="1995-08-15" placeholder="DD/MM/AAAA">
             </div>
           </div>
 
           <div class="action-buttons" style="margin-top: 32px;">
-            <button class="button button-primary" onclick="window.location.href='documentos.html'">
+            <button class="button button-primary" onclick="let allFilled = true; let emailValid = true; document.querySelectorAll('.matricula-card input').forEach(input => { if(input.value.trim() === '') allFilled = false; if(input.type === 'email' && !input.value.includes('@')) emailValid = false; }); if(!allFilled) { alert('Por favor, preencha todos os campos obrigatórios antes de prosseguir.'); } else if(!emailValid) { alert('Por favor, insira um endereço de e-mail válido.'); } else { window.location.href='documentos.html'; }">
               Continuar para Documentos
               <i class="ph-bold ph-arrow-right"></i>
             </button>
-            <button class="button button-outline">
+            <button class="button button-outline" onclick="window.location.href='documentos.html'">
               Salvar para depois
             </button>
           </div>
@@ -100,19 +107,19 @@
       </div>
 
       <nav class="frame bottom-navigation" aria-label="Navegação principal">
-        <button class="nav-item">
+        <button class="nav-item" onclick="window.location.href='portal.html'">
           <i class="ph ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
           <span class="nav-label">Dashboard</span>
         </button>
-        <button class="nav-item active green">
+        <button class="nav-item active green" onclick="window.location.href='matricula.html'">
           <i class="ph-fill ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
           <span class="nav-label">Inscrições</span>
         </button>
-        <button class="nav-item">
+        <button class="nav-item" onclick="window.location.href='inbox.html'">
           <i class="ph ph-bell nav-icon inbox" aria-hidden="true"></i>
           <span class="nav-label">Inbox</span>
         </button>
-        <button class="nav-item">
+        <button class="nav-item" onclick="window.location.href='conta.html'">
           <i class="ph ph-user nav-icon account" aria-hidden="true"></i>
           <span class="nav-label">Conta</span>
         </button>

@@ -15,11 +15,28 @@
           <i class="ph ph-arrow-left"></i>
         </button>
         <h1 class="page-title">Portal de Candidaturas</h1>
-        <div class="avatar-empty"></div>
+        <div class="avatar" style="cursor: pointer;" onclick="window.location.href='conta.html'">
+          <i class="ph ph-user" style="font-size: 24px; color: #0f172a;"></i>
+        </div>
       </header>
 
       <div class="revisao-content">
-        <div class="revisao-stepper">
+        <div class="step-header">
+          <span class="step-indicator">PASSO 4 DE 4</span>
+          <h2>Revise sua Candidatura</h2>
+          <p>Por favor, confirme se todas as informações abaixo estão corretas antes de proceder ao pagamento.</p>
+          
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 100%;"></div>
+          </div>
+        </div>
+
+        <div class="stepper">
+          <div class="step completed">
+            <div class="step-circle"><i class="ph-bold ph-check"></i></div>
+            <span class="step-label">Curso</span>
+          </div>
+          <div class="step-line completed"></div>
           <div class="step completed">
             <div class="step-circle"><i class="ph-bold ph-check"></i></div>
             <span class="step-label">Pessoal</span>
@@ -27,23 +44,13 @@
           <div class="step-line completed"></div>
           <div class="step completed">
             <div class="step-circle"><i class="ph-bold ph-check"></i></div>
-            <span class="step-label">Curso</span>
+            <span class="step-label">Documentos</span>
           </div>
           <div class="step-line completed"></div>
-          <div class="step active outline">
-            <div class="step-circle">3</div>
-            <span class="step-label">Resumo</span>
-          </div>
-          <div class="step-line"></div>
-          <div class="step inactive">
+          <div class="step active">
             <div class="step-circle">4</div>
-            <span class="step-label">Pagamento</span>
+            <span class="step-label">Revisão</span>
           </div>
-        </div>
-
-        <div class="revisao-header">
-          <h2>Revise sua Candidatura</h2>
-          <p>Por favor confirme que todas as informações abaixo são correto antes de proceder ao pagamento portal.</p>
         </div>
 
         <div class="review-cards">
@@ -54,7 +61,7 @@
                 <i class="ph ph-user"></i>
                 <h3>Dados Pessoais</h3>
               </div>
-              <button class="edit-btn">Edit</button>
+              <button class="edit-btn" onclick="window.location.href='pessoal.html'">Editar</button>
             </div>
             
             <div class="review-data-group">
@@ -68,8 +75,18 @@
             </div>
             
             <div class="review-data-group">
-              <label>Endereco de Email</label>
-              <span>alex.rivera@example.com</span>
+              <label>Endereço de E-mail</label>
+              <span>alex.rivera@gmail.com</span>
+            </div>
+            
+            <div class="review-data-group">
+              <label>Celular</label>
+              <span>(11) 98765-4321</span>
+            </div>
+            
+            <div class="review-data-group">
+              <label>Data de Nascimento</label>
+              <span>15/08/1995</span>
             </div>
           </div>
 
@@ -86,54 +103,53 @@
               <span class="pill-verified">Verificado</span>
               <span class="meta-text">Diploma de Bacharelado</span>
             </div>
-            
-            <button class="link-action">Mudar de Curso</button>
           </div>
 
           <!-- Card 3: Campus -->
           <div class="review-card">
-            <div class="review-card-subtitle">
-              <i class="ph ph-map-pin"></i>
-              <span>CAMPUS</span>
+            <div class="review-card-header">
+              <div class="review-card-title">
+                <i class="ph ph-map-pin"></i>
+                <h3>Campus</h3>
+              </div>
+              <button class="edit-btn" onclick="window.location.href='matricula.html'">Alterar Localização</button>
             </div>
             
-            <h3 class="normal-title">Campus</h3>
-            <p class="campus-address">Av. University Heights, 1200</p>
-            
-            <button class="link-action">Alterar localização</button>
+            <h3 class="normal-title">Campus Central</h3>
+            <p class="campus-address">Polo de Inovação e Tecnologia</p>
           </div>
         </div>
 
         <!-- Privacy Alert -->
         <div class="privacy-alert">
           <i class="ph ph-info"></i>
-          <p>Your data is encrypted and stored securely according to our <a href="#">Privacy Policy</a>. No payment information has been collected yet.</p>
+          <p>Seus dados são criptografados e armazenados de forma segura, de acordo com nossa <a href="#">Política de Privacidade</a>. Nenhuma informação de pagamento foi coletada ainda.</p>
         </div>
 
         <!-- Submit Section -->
         <div class="submit-section">
           <button class="button btn-submit-payment" onclick="window.location.href='finalizacao.html'">
-            Confirme e Prossiga<br>para o pagamento.
+            Confirmar e Prosseguir
             <i class="ph-bold ph-arrow-right"></i>
           </button>
-          <p class="terms-text">Ao clicar em "Confirmar",<br>você concorda com nossos Termos de Inscrição.</p>
+          <p class="terms-text">Ao clicar em "Confirmar e Prosseguir",<br>você concorda com nossos Termos de Inscrição.</p>
         </div>
       </div>
 
       <nav class="frame bottom-navigation" aria-label="Navegação principal">
-        <button class="nav-item">
+        <button class="nav-item" onclick="window.location.href='portal.html'">
           <i class="ph ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
           <span class="nav-label">Dashboard</span>
         </button>
-        <button class="nav-item active green">
+        <button class="nav-item active green" onclick="window.location.href='matricula.html'">
           <i class="ph-fill ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
           <span class="nav-label">Inscrições</span>
         </button>
-        <button class="nav-item">
+        <button class="nav-item" onclick="window.location.href='inbox.html'">
           <i class="ph ph-bell nav-icon inbox" aria-hidden="true"></i>
           <span class="nav-label">Inbox</span>
         </button>
-        <button class="nav-item">
+        <button class="nav-item" onclick="window.location.href='conta.html'">
           <i class="ph ph-user nav-icon account" aria-hidden="true"></i>
           <span class="nav-label">Conta</span>
         </button>

@@ -15,18 +15,12 @@
           <i class="ph ph-arrow-left"></i>
         </button>
         <h1 class="page-title">Portal de Candidaturas</h1>
-        <div class="avatar-empty"></div>
+        <div class="avatar" style="cursor: pointer;" onclick="window.location.href='conta.html'">
+          <i class="ph ph-user" style="font-size: 24px; color: #0f172a;"></i>
+        </div>
       </header>
 
       <div class="final-content">
-        <!-- Minimal Stepper -->
-        <div class="mini-stepper">
-          <div class="step-circle mini completed"><i class="ph-bold ph-check"></i></div>
-          <div class="step-line mini completed"></div>
-          <div class="step-circle mini completed"><i class="ph-bold ph-check"></i></div>
-          <div class="step-line mini completed"></div>
-          <div class="step-circle mini active">3</div>
-        </div>
 
         <!-- Success Card -->
         <div class="success-card">
@@ -36,14 +30,14 @@
             </div>
             <h2>Inscrição Realizada!</h2>
           </div>
-          <p class="success-text">Sua solicitação de matricula para <strong>Engenharia de Software (2024.1)</strong> foi enviada com sucesso.</p>
+          <p class="success-text">Sua solicitação de matrícula para <strong>Engenharia de Software</strong> foi enviada com sucesso.</p>
           
-          <div class="inscription-number-box">
+          <div class="inscription-number-box" id="inscription-box">
             <span>NÚMERO DA INSCRIÇÃO</span>
             <h3>#2024-8842-XP</h3>
-            <div class="status-pill waiting">
-              <div class="dot"></div>
-              Aguardando Pagamento
+            <div class="status-pill waiting" id="payment-status-pill">
+              <div class="dot" id="payment-status-dot"></div>
+              <span id="payment-status-text">Aguardando Pagamento</span>
             </div>
           </div>
         </div>
@@ -63,7 +57,7 @@
               </div>
               <div class="toggle-texts">
                 <strong>WhatsApp</strong>
-                <span>(11) 9****-1234</span>
+                <span>(11) 9****-4321</span>
               </div>
             </div>
             <label class="switch">
@@ -79,7 +73,7 @@
               </div>
               <div class="toggle-texts">
                 <strong>E-mail</strong>
-                <span>e.silva@email.com</span>
+                <span>alex.rivera@gmail.com</span>
               </div>
             </div>
             <label class="switch">
@@ -109,7 +103,7 @@
                 <i class="ph ph-qr-code"></i>
               </div>
             </div>
-            <button class="button btn-pix" onclick="this.innerHTML='<i class=\'ph ph-check\'></i> PIX Gerado e Copiado!'; this.style.backgroundColor='#16a34a';">
+            <button class="button btn-pix" onclick="this.innerHTML='<i class=\'ph ph-check\'></i> PIX Gerado e Copiado!'; this.style.backgroundColor='#16a34a'; document.getElementById('payment-status-pill').classList.replace('waiting', 'processing'); document.getElementById('payment-status-text').innerText='Pagamento em Processamento'; document.getElementById('inscription-box').classList.add('processing');">
               <i class="ph ph-copy"></i>
               Gerar PIX
             </button>
@@ -125,6 +119,10 @@
             <i class="ph ph-info"></i>
             <p>O pagamento via PIX é compensado instantaneamente. Boletos podem levar até 3 dias úteis para processamento.</p>
           </div>
+
+          <button class="button button-outline" style="width: 100%; margin-top: 24px;" onclick="window.location.href='portal.html'">
+            Retornar ao início
+          </button>
         </div>
       </div>
 
@@ -133,18 +131,18 @@
           <i class="ph ph-squares-four nav-icon dashboard" aria-hidden="true"></i>
           <span class="nav-label">Dashboard</span>
         </button>
-        <button class="nav-item active green">
+        <button class="nav-item active green" onclick="window.location.href='matricula.html'">
           <i class="ph-fill ph-clipboard-text nav-icon inscriptions" aria-hidden="true"></i>
           <span class="nav-label">Inscrições</span>
         </button>
-        <button class="nav-item">
+        <button class="nav-item" onclick="window.location.href='inbox.html'">
           <div class="inbox-icon-container">
             <i class="ph ph-bell nav-icon inbox" aria-hidden="true"></i>
             <div class="notification-dot"></div>
           </div>
           <span class="nav-label">Inbox</span>
         </button>
-        <button class="nav-item">
+        <button class="nav-item" onclick="window.location.href='conta.html'">
           <i class="ph ph-user nav-icon account" aria-hidden="true"></i>
           <span class="nav-label">Conta</span>
         </button>
