@@ -1977,7 +1977,7 @@ input:checked + .slider:before {
     width: 100% !important;
     max-width: 100% !important;
   }
-  .frame, [class*="-frame"] {
+  .app-shell > .frame, .app-shell > [class*="-frame"] {
     border-radius: 0 !important;
     box-shadow: none !important;
     min-height: 100vh !important;
