@@ -1968,7 +1968,7 @@ input:checked + .slider:before {
 
 
 /* Mobile Responsiveness for Real Devices */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   body {
     padding: 0 !important;
     background: #f8fafc !important;
