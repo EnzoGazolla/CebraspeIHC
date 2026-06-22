@@ -35,7 +35,9 @@ button {
 }
 
 .app-shell {
-  width: min(380px, 100%);
+  width: 100%;
+  max-width: 380px;
+  transition: max-width 0.3s ease;
 }
 
 .frame.inicio-iphone-17 {
@@ -1981,5 +1983,56 @@ input:checked + .slider:before {
     border-radius: 0 !important;
     box-shadow: none !important;
     min-height: 100vh !important;
+  }
+}
+
+/* Desktop Adaptability */
+@media (min-width: 769px) {
+  .app-shell {
+    max-width: 900px;
+  }
+  .bento-grid-for-inscriptions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .announcement-card {
+    display: flex;
+  }
+  .announcement-media {
+    flex: 0 0 40%;
+  }
+  .announcement-media img {
+    height: 100%;
+    min-height: 200px;
+  }
+  .announcement-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .auth-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .checkbox-group, .auth-submit {
+    grid-column: span 2;
+  }
+  .review-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .upload-area {
+    padding: 48px 24px;
+  }
+  .checklist-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .stepper, .docs-stepper {
+    padding: 0 48px 24px;
   }
 }
